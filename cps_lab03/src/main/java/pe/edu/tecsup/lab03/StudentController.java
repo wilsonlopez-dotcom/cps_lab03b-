@@ -1,7 +1,17 @@
-package pe.edu.tecsup.lab03;
+package pe.edu.tecsup.lab03.controllers;
+
+import pe.edu.tecsup.lab03.services.StudentService;
 
 public class StudentController {
-    public void showStudent() {
-        System.out.println("Mostrando estudiante...");
+
+    private StudentService studentService;
+
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
+
+    public void showStudentInfo(Long id) {
+        System.out.println("Mostrando información del estudiante con ID: " + id);
+        studentService.getStudentById(id);
     }
 }
