@@ -10,6 +10,10 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    public void showStudent() {
+        System.out.println("Mostrando estudiante...");
+    }
+
     public void showStudentInfo(Long id) {
         System.out.println("Mostrando información del estudiante con ID: " + id);
         studentService.getStudentById(id);
